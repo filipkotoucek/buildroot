@@ -1,0 +1,20 @@
+[Unit]
+Description=Start USB gadget
+Requires=dev-mmcblk0p2.device
+#Wants=serial-getty@ttyS0.service
+Wants=udhcpd.service
+
+After=dev-mmcblk0p2.device
+#Before=serial-getty@ttyS0.service
+Before=udhcpd.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/usb-ethernet.sh
+#ExecStopPre=/bin/systemctl stop serial-getty@ttyGS0.service
+ExecStop=/sbin/rmmod g_multi
+
+[Install]
+WantedBy=basic.target
+

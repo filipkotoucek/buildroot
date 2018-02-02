@@ -1,0 +1,6 @@
+iface usb0 inet static
+address 192.168.7.2
+netmask 255.255.255.252
+
+post-up route add -net 192.168.7.0 netmask 255.255.255.252 gw 192.168.7.1 dev usb0
+

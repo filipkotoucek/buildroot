@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="1d6b", ATTRS{idProduct}=="0002",  RUN+="/bin/systemctl start usb-ethernet.service"
+ACTION=="remove", SUBSYSTEM=="usb", ATTRS{idVendor}=="1d6b", ATTRS{idProduct}=="0002",  RUN+="/bin/systemctl stop usb-ethernet.service"
