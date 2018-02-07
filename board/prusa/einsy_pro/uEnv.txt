@@ -1,5 +1,6 @@
 devtype=mmc
 bootpart=0:1
 bootdir=
+fdtfile=am335x-prusa-pro.dtb
 bootargs=console=ttyO0,115200n8 root=/dev/mmcblk0p2 rw rootfstype=ext4 rootwait
-uenvcmd=run loadimage;run findfdt;run loadfdt;printenv bootargs;bootz ${loadaddr} - ${fdtaddr};
+uenvcmd=run loadimage;run loadfdt;printenv bootargs;bootz ${loadaddr} - ${fdtaddr};
