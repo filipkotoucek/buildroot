@@ -14,9 +14,10 @@ cp board/prusa/einsy_pro/uEnv.txt $BINARIES_DIR/uEnv.txt
 #if [ -e ${BINARIES_DIR}/am335x-bonegreen.dtb ] ; then
 #	GENIMAGE_CFG="${BOARD_DIR}/genimage.cfg"
 #else
-	GENIMAGE_CFG="${BOARD_DIR}/genimage_linux41.cfg"
+#	GENIMAGE_CFG="${BOARD_DIR}/genimage_linux41.cfg"
 #fi
 
+GENIMAGE_CFG="${BOARD_DIR}/genimage_linux41.cfg"
 GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 
 rm -rf "${GENIMAGE_TMP}"
